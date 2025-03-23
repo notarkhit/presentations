@@ -1,2 +1,3 @@
 # presentations
-Presntations made for running using presenterm
+Presntations made in markdown  
+can be presented using [presenterm](https://github.com/mfontanini/presenterm)
