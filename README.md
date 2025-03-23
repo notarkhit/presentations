@@ -1,3 +1,4 @@
 # presentations
-Presntations made in markdown  
-can be presented using [presenterm](https://github.com/mfontanini/presenterm)
+
+Presntations made in Markdown.  
+These can be presented using [presenterm](https://github.com/mfontanini/presenterm)
