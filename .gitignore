@@ -4,4 +4,8 @@
 
 !**/*.md
 
+!**/*.png
+
+!**/*.jpg
+
 .obsidian/
