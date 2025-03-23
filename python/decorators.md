@@ -32,13 +32,15 @@ fn()
 IMAGE 
 ==
 
-<!-- column_layout: [1,2,2,1] -->
+<!-- column_layout: [2,1,1,2] -->
 
 <!-- column: 1 -->
 
 # python logo
 
 - this logo
+- is the official
+- python logo
 
 <!-- column: 2 -->
 ![image:width:25%](imgs/python.png)
