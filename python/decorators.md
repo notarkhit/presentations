@@ -32,5 +32,14 @@ fn()
 IMAGE 
 ==
 
-![image:width:50%](../../Pictures/archlinux.png)
+<!-- column_layout: [3,2] -->
+
+<!-- column: 0 -->
+
+# python logo
+
+- this logo
+
+<!-- column: 1 -->
+![image:width:25%](imgs/python.png)
 
