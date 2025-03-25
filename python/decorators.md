@@ -4,6 +4,7 @@ sub_title: "@ decorators"
 author: Aryan Arkhit Behra
 ---
 
+<!-- font_size: 2 -->
 Decorators in Python
 ==
 
@@ -36,10 +37,7 @@ greet()
 
 ```
 
----
-
-Explanation:
-==
+## Explanation:
 
 - decorator takes the greet function as an argument.
 
@@ -178,7 +176,7 @@ Types of Decorators
 1 Function Decorators 
 ==
 
-The most common type of decorator, which takes a function as input and returns a new function. The example above demonstrates this type.
+>The most common type of decorator, which takes a function as input and returns a new function. The example above demonstrates this type.
 
 ```python +exec
 def simple_decorator(func):
@@ -198,7 +196,7 @@ greet()
 ---
 2 Method decorators
 ==
-Used to decorate methods within a class. They often handle special cases, such as the self argument for instance methods.
+>Used to decorate methods within a class. They often handle special cases, such as the self argument for instance methods.
 
 ```python +exec
 def method_decorator(func):
@@ -221,7 +219,7 @@ obj.say_hello()
 ---
 3 Class decorators
 ==
-Class decorators are used to modify or enhance the behavior of a class. Like function decorators, class decorators are applied to the class definition. They work by taking the class as an argument and returning a modified version of the class.
+>Class decorators are used to modify or enhance the behavior of a class. Like function decorators, class decorators are applied to the class definition. They work by taking the class as an argument and returning a modified version of the class.
 
 ```python +exec
 def fun(cls):
@@ -239,17 +237,21 @@ print(Person.class_name)
 Built in Decorators
 ==
 Python provides several built-in decorators that are commonly used in class definitions. These decorators modify the behavior of methods and attributes in a class, making it easier to manage and use them effectively. The most frequently used built-in decorators are 
+  
 @staticmethod   
+  
 @classmethod   
-@property  
+  
+@property   
+  
 @singledispatch  
-
+  
 ---
 
 @staticmethod
 ==
 
-The @staticmethod decorator is used to define a method that doesn’t operate on an instance of the class (i.e., it doesn’t use self). Static methods are called on the class itself, not on an instance of the class.
+>The @staticmethod decorator is used to define a method that doesn’t operate on an instance of the class (i.e., it doesn’t use self). Static methods are called on the class itself, not on an instance of the class.
 
 
 ```python +exec
@@ -268,7 +270,7 @@ print(res)
 @classmethod
 ==
 
-The @classmethod decorator is used to define a method that operates on the class itself (i.e., it uses cls). Class methods can access and modify class state that applies across all instances of the class.
+>The @classmethod decorator is used to define a method that operates on the class itself (i.e., it uses cls). Class methods can access and modify class state that applies across all instances of the class.
 
 ```python +exec
 class Employee:
@@ -291,7 +293,7 @@ print(Employee.raise_amount)
 @property
 ==
 
-The @property decorator is used to define a method as a property, which allows you to access it like an attribute. This is useful for encapsulating the implementation of a method while still providing a simple interface.
+>The @property decorator is used to define a method as a property, which allows you to access it like an attribute. This is useful for encapsulating the implementation of a method while still providing a simple interface.
 
 ```python +exec
 class Circle:
@@ -326,30 +328,30 @@ print(c.area)
 @singledispatch
 ==
 
-A function with the same name but different behavior with respect to the type of argument is a generic function.  The ‘@singledispatch’ decorator in Python is used to create a generic function. This allows an individual to create an overloaded function that can work with multiple types of parameters.
+>A function with the same name but different behavior with respect to the type of argument is a generic function.  The ‘@singledispatch’ decorator in Python is used to create a generic function. This allows an individual to create an overloaded function that can work with multiple types of parameters.
 
 ```python +exec
 from functools import singledispatch
 
 @singledispatch
-def geek_func(arg):
+def message(arg):
     print("Function Call with single argument")
 
-@geek_func.register(int)
+@message.register(int)
 def _(arg):
     print("Function Called with an integer")
 
-@geek_func.register(str)
+@message.register(str)
 def _(arg):
     print("Function Called with a string")
 
-@geek_func.register(list)
+@message.register(list)
 def _(arg):
     print("Function Called with a list")
 
-geek_func(1) 
-geek_func([1, 2, 3]) 
-geek_func("geek") 
-geek_func({1: "geek1", 2: "geek2"}) 
+message(1) 
+message([1, 2, 3]) 
+message("tux") 
+message({1: "arms", 2: "seig"}) 
 
 ```
