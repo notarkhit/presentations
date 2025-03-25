@@ -5,8 +5,7 @@ author: Aryan Arkhit Behra
 ---
 
 <!-- font_size: 2 -->
-Decorators in Python
-==
+# Decorators in Python
 
 In Python, decorators are a powerful and flexible way to modify or extend the behavior of functions or methods, without changing their actual code. A decorator is essentially a function that takes another function as an argument and returns a new function with enhanced functionality.
 
@@ -117,15 +116,15 @@ Functions as First-Class Objects
 def greet(n):
     return f"Hello, {n}!"
 
-say_hi = greet  # Assign the greet function to say_hi
-print(say_hi("Alice"))  # Output: Hello, Alice!
+say_hi = greet  
+print(say_hi("Alice"))
 
 # Passing a function as an argument
 def apply(f, v):
     return f(v)
 
 res = apply(say_hi, "Bob")
-print(res)  # Output: Hello, Bob!
+print(res)
 
 # Returning a function from another function
 def make_mult(f):
@@ -134,7 +133,7 @@ def make_mult(f):
     return mult
 
 dbl = make_mult(2)
-print(dbl(5))  # Output: 10
+print(dbl(5))  
 ```
 ---
 
