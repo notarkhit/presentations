@@ -5,3 +5,7 @@ These can be presented using [presenterm](https://github.com/mfontanini/presente
 
 
 +exec - executable block ( -x flag)
+
+```bash
+presenterm presentation.md -x
+```
